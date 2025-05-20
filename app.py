@@ -28,3 +28,8 @@ except ConnectionRefusedError:
     print("Server not running! Start Flask first.")
 except Exception as e:
     print(f"Error: {e}")
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Hello from Render!"
